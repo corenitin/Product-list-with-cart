@@ -1,28 +1,25 @@
 fetch("data.json")
-  .then(res => res.json())
-  .then(products => renderProducts(products));
+  .then((res) => res.json())
+  .then((products) => renderProducts(products));
 
 function renderProducts(products) {
   const container = document.getElementById("products");
 
-  products.forEach(product => {
+  products.forEach((product) => {
     const productCard = `
-      <div class="bg-white p-4 rounded shadow flex flex-col">
-        
-        <img 
-          src="${product.images[0]}" 
-          class="h-40 object-contain mb-2"
-        />
-
-        <h3 class="font-semibold text-lg">${product.title}</h3>
-        <p class="text-gray-600">₹${product.price}</p>
-
-        <button 
-          class="mt-auto bg-blue-600 text-white py-2 rounded"
-          onclick="addToCart(${product.id})"
-        >
-          Add to Cart
+    <div class="relative pb-6">
+        <img src="${product.image.mobile}" class="rounded-xl w-full" alt="Waffle image">
+        <button
+          class="h-8 px-4  font-semibold  bg-white border border-rose-900 rounded-3xl shadow-md flex flex-row gap-2 items-center justify-center absolute  left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <img src="assets/images/icon-add-to-cart.svg" class="w-4" alt="">
+          <span class="text-[12px]">Add to Cart</span>
         </button>
+      </div>
+
+      <div class = "pb-4">
+        <p class="text-[12px]  text-rose-400 font-normal">${product.category}</p>
+        <h3 class="text-[16px] font-semibold text-red-900">${product.name}</h3>
+        <p class="text-[16px] font-bold text-rose-500">₹ ${product.price}</p>
       </div>
     `;
 
