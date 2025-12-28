@@ -8,11 +8,11 @@ function renderProducts(products) {
   products.forEach((product) => {
     const productCard = `
     <div class="relative pb-6">
-        <img src="${product.image.mobile}" class="rounded-xl w-full" alt="Waffle image">
+        <img src="${product.image.mobile}" class="rounded-xl w-full shadow" alt="Waffle image">
         <button
           class="h-8 px-4  font-semibold  bg-white border border-rose-900 rounded-3xl shadow-md flex flex-row gap-2 items-center justify-center absolute  left-1/2 -translate-x-1/2 -translate-y-1/2">
           <img src="assets/images/icon-add-to-cart.svg" class="w-4" alt="">
-          <span class="text-[12px]">Add to Cart</span>
+          <span class="text-[11px]">Add to Cart</span>
         </button>
       </div>
 
