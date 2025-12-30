@@ -12,7 +12,7 @@ function renderProducts(products) {
         <button
           id="add-${product.id}"
           onclick="addToCart(${product.id})"
-          class="h-8 px-4  font-semibold  bg-white border border-rose-900 rounded-3xl shadow-md flex flex-row gap-2 items-center justify-center absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+          class="h-8 w-28  font-semibold  bg-white border border-rose-900 rounded-3xl shadow-md flex flex-row gap-2 items-center justify-center absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
           <img src="assets/images/icon-add-to-cart.svg" class="w-4" alt="">
           <span class="text-[11px]">Add to Cart</span>
         </button>
@@ -25,12 +25,12 @@ function renderProducts(products) {
                 shadow-md flex items-center justify-between px-3">
 
           <button onclick="decreaseQty(${product.id})"
-                  class=""><img src="assets/images/icon-decrement-quantity.svg" class="p-2  rounded-full border border-white" alt=""></button>
+                  class=""><img src="assets/images/icon-decrement-quantity.svg" class="w-3" alt=""></button>
 
-          <span id="count-${product.id}" class="text-sm font-semibold">1</span>
+          <span id="count-${product.id}" class="text-sm  text-white font-medium">1</span>
 
           <button onclick="increaseQty(${product.id})"
-                  class="font-bold text-lg text-rose-900">+</button>
+                  class="font-bold text-lg text-rose-900"><img src="assets/images/icon-increment-quantity.svg" class="w-3" alt=""></button>
         </div>
       </div>
 
